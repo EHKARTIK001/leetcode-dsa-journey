@@ -1,0 +1,21 @@
+THIS IS THE ONLY RANGE ONLY THE EVEN NUMBER EXIST EAISLY MAKE COUNT PLAYS AND RETURN .
+AND ALSO MULTIPLE APPROACH EXIST 
+ 1. TRADITIONAL METHOD BY DIVIDE . 
+ 2. CHANGE TO STRING  . 
+ 3. BY USING CEIL . 
+ 4. BY USING FLOOR . 
+
+class Solution {
+public:
+    int findNumbers(vector<int>& nums) {
+        int count  = 0 ; 
+         int n   = nums.size();
+         for (int i = 0  ; i< n;  i++){
+    if(nums[i]>=10 && nums[i]<=99  
+      || nums[i]>=1000 && nums[i]<=9999
+      || nums[i]== 100000)count++;
+      
+         }
+      return count ;
+    }
+};
