@@ -1,0 +1,18 @@
+//HOW TO REVERSE THE LINKEDLST VERY EASY APPROACH 
+//BY TAKING THE HELP OF THREE POINTERS AND CHANGES THE POINTER ACCORDING THE QUESTION AND CODE IS FGIVEN BELOW 
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+   ListNode* curr = head; 
+   ListNode* prev = NULL ; 
+    ListNode* next = NULL ; 
+     while(curr!=NULL){
+    next = curr->next  ;  //STORE THE NEXT [POINTER]
+    curr->next = prev ; // REBUILD OR CHNAGE THE CONNECTIONS 
+     prev = curr ;  // UPDATE THE POINTERS 
+     curr = next ; 
+     }
+     return prev ;
+    }
+}
+
