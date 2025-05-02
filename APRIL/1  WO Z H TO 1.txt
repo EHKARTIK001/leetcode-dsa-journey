@@ -1,0 +1,27 @@
+1  WO Z H TO 1
+0
+0
+A = 9   
+40 
+60
+9  
+AJJ NHI KAL BAAT KARTE H 
+EH01(MRROBOT)
+ 4 
+infinite loop 
+3 out of 0 ;
+apt sudo update '-rf'
+functyion solve (int p , int q )
+{ int value ;
+while(q)
+{
+value = p%q;
+p= q ' 
+ q = value
+}
+return p ; 
+p = 15 ' q = 3 ; 
+
+}
+
+
