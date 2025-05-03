@@ -1,0 +1,14 @@
+THIS IS QUESTION FIND THE MIDDDLE NODE OF LNKEDLIST 
+APPROACH BY TAKING POINTER(FAST AND SLOW POINTER)
+ class Solution {
+ public:
+    ListNode* middleNode(ListNode* head) {
+        ListNode* slow  = head  ; 
+        ListNode* fast  = head  ; 
+        while(fast!=NULL&& fast->next!=NULL){
+        slow = slow->next ; 
+        fast = fast->next->next ;
+        }
+    return slow ;
+    }
+ }
