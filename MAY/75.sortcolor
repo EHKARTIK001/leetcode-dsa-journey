@@ -1,0 +1,24 @@
+THIS QUES HAVE ONLY THREE VARIABLES AND SORT THEN WITHOUT USING THE SORT FUNCTION RESPECTIVELY (TWO POINTER APPROACH)
+class Solution {
+public:
+    void sortColors(vector<int>& nums) {
+    int n = nums.size();
+    int i = 0 ;  1 POINTER
+    int j = 0 ;  ALT POINTER TRACK 1 POINTER 
+     int k = n-1  ;  2 POINTER 
+      while(j<=k){
+     if(nums[j]==1){
+    j++ ; 
+     }
+     else if(nums[j]==2){
+     swap(nums[j],nums[k]);
+     k--;
+     }
+     else {
+      swap(nums[j] ,nums[i]);
+      j++;
+       i++;
+     }
+      }
+    }
+};
