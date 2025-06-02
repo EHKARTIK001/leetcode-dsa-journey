@@ -34,3 +34,19 @@ public:
     return ways ;
     }
 };
+ THIS IS THE THRID APPROACH OF THE QUESTION TO REDUCE THE COMPLEXTITY OF THE CODE CUDE TO SQUARE 
+ class Solution {
+public:
+    int distributeCandies(int n, int limit) {
+    int ways = 0 ;
+    for(int i = 0 ; i<=min(n , limit) ; i++){
+    for(int j = 0  ; j< min(n-i  , limit ) ; j++ ){
+     int k  n - i - j ; 
+     if(k>=0 && k<=limit)
+    if(i+j+k==n)  ways++;
+ 
+    }
+    }
+    return ways ;
+    }
+};
