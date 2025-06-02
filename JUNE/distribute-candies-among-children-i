@@ -18,3 +18,19 @@ int solve(int countchild , int n , int limit){
     return solve(0 , n , limit);
     }
 };
+ THIS IS THE SECOND APPROACH OF THIS QUESTION IS QUESTION ITERTIVE 
+ BY USING LOOPS T.C IS O(N*3)
+ class Solution {
+public:
+    int distributeCandies(int n, int limit) {
+    int ways = 0 ;
+    for(int i = 0 ; i<=min(n , limit) ; i++){
+    for(int j = 0  ; j< min(n-i  , limit ) ; j++ ){
+    for(int k = 0 ; k<min(n-i-j , limit); k++){
+    if(i+j+k==n)  ways++;
+    }
+    }
+    }
+    return ways ;
+    }
+};
