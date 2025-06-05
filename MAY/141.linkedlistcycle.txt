@@ -1,9 +1,9 @@
 FAST AND SLOW TWO POINTER APPROACH 
 class Solution {
 public:
-    bool hasCycle(ListNode *head) {
-        ListNode* slow = head ; 
-        ListNode* fast = head ; 
+    bool hasCycle(ListNode *head) { // THE THE NEW THE HEAD 
+        ListNode* slow = head ; MAKE THE TWO POINTER APPROACH 
+        ListNode* fast = head ; FOR TWO NODE SLOW AND FAST POINTER 
     while(fast!=NULL  && fast->next!=NULL){
      slow = slow->next ; 
      fast = fast->next->next ;
