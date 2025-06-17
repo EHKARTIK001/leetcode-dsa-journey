@@ -1,0 +1,26 @@
+solution 
+find the solution of the question in we find the unique paths i grid of a box 
+pattern recurrion and memoratition 
+class solution {
+    solve(i , j , m ,n ){
+        if(i<0 || i<=m ||j<0 || j<=n){
+            return  0 ; 
+        }
+        if(i==m-1 || j ==n-1 ){
+            return 1 ; 
+
+        }
+         if(t[i][j]!=-1){
+            returnt[i][j];
+         }
+        int rd =solve(i  , j+1 , m , n );
+         int dd =solve(i+1  , j , m , n );
+         return t[i][j]= rd +dd ; 
+    }
+ uniquepath(vector<int>&nums ,vector<vector<int>>&t){
+    vector<vector<int>>t(m+1 , vector<int> n . -1)
+    int n = nums.size();
+     return solve( 0 , 0 , m , n ,t )
+    
+ }
+}
