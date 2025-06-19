@@ -1,4 +1,4 @@
-THIS IS THE SOLUTION BY USING SORTING IS BEST TO FIND MX DIFF EQUAL TO K 
+THIS IS THE SOLUTION BY USING SORTING IS BEST TO FIND MX DIFF EQUAL TO K SMAJO
 class Solution {
 public:
     vector<vector<int>> divideArray(vector<int>& nums, int k) {
