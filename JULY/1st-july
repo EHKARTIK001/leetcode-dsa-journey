@@ -1,0 +1,12 @@
+PROBLEM OF THE DAY OF 1ST .
+EASY => PATTERN (ALICE WORD IN STRING )
+class solution(STRING &WORD){ //
+int count  = 0 ;  // TAKE A VARIABLE FOR COUNT A VARIABLE 
+int n = word.size(); //  THIS THE METHOD OF FIND THE SIZE
+for(int i = 1 ; i< n ; i++){
+if(word[i]==word[i-1]){ // THE THE PREVOIUS NUMBER FIND THE THE CHARCTER MATCH THE NEW MATCH 
+count++; // NEW ONE FOR THE COUNT 
+}
+return count +1 ; // ONE FOR THE NO MISTAKE 
+}
+}
