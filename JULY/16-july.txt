@@ -1,0 +1,27 @@
+TODAY I HAVE DONE THE QUES OF THE DONE OF 18
+THE SOLUTION IS BE LIKE TRANSPOSE AND REVERSE TO CHEAK ROTTATE 9-0 DEGREE AND FOR ALL THIS LIKE 180 , 270 ALSO 
+SO MAKE A FUNCTION OR CALL AND UNTIL GET THE RESULT TRUE OF OF IF THE MATRIX OF ROTATED IS EQUAL TO THE TARGET AND THE CODE LIKE THIS 
+---------------------------------------------------------------------------------------------------------------------------------------------------
+class Solution {
+public:
+    bool findRotation(vector<vector<int>>& mat, vector<vector<int>>& target) {
+        int n = mat.size() ; 
+        for( int k = 0 ; k<4 ; k++){
+            if(mat==target){ return true ;
+            }
+           rotate(mat); 
+        }
+        return false ; 
+    }
+     void rotate(vector<vector<int>>& mat){
+        int n = mat.size(); 
+        for(int i = 0; i< n ;i++){
+        for(int j = i ; j< n ; j++){
+            swap(mat[i][j],mat[j][i]);
+        }
+        }
+        for(int i = 0 ; i< n ; i++){
+            reverse(mat[i].begin(), mat[i].end());
+        }
+     }
+};
