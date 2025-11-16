@@ -1,0 +1,22 @@
+class Solution {
+public:
+    int numSub(string s) {
+        int n = s.size();
+        int cont = 1e9+7;
+        long long count = 0; 
+        long long result = 0; 
+
+        for (int i = 0; i < n; i++) {
+            if (s[i] == '1')
+                count++;
+            else 
+                count = 0;
+
+            // FIXED formula
+            result = (result + count) % cont;
+        }
+
+        // REMOVE the incorrect line
+        return result;
+    }
+};
