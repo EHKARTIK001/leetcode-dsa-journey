@@ -1,0 +1,21 @@
+THE SUBARRAY SUM DIVIBLE BY K 
+THE FIRST APPOACH IS BRUTE FORCE WITH THE TIME COMPLEXITY OF 0(n*n*n)
+CODE OF 1 APPRAOCH 
+class Solution {
+public:
+    int subarraysDivByK(vector<int>& nums, int k) {
+    int result = 0 ; 
+    int n = nums.size();
+    for(int i = 0 ; i<n ; i++){
+        int sum = 0 ; 
+        for(int j = i ; j<n; j++){
+            sum+=nums[j];
+            if(sum%k==0){
+                result ++;
+            }
+
+        }
+    }
+    return result;
+    }
+};
