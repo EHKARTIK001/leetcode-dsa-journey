@@ -1,0 +1,21 @@
+ THE OPTIMAL APPRAOCH OF A QUESTION 
+class Solution {
+public:
+    int countPartitions(vector<int>& nums) {
+        int n = nums.size();
+        int sum = 0;
+        int lfs = 0;
+        int count = 0;
+        for (int i = 0; i < n; i++) {
+            sum += nums[i];
+        }
+        for (int i = 0; i <=n-2; i++) {
+            lfs += nums[i];
+            int rsf = sum - lfs;
+            if ((lfs - rsf) % 2 == 0) {
+                count++;
+            }
+        }
+        return count;
+    }
+};
