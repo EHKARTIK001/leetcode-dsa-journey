@@ -1,0 +1,21 @@
+THIS IS THE QUESTIION OF BALANCED TREE 
+CODE 
+class solution {
+    HEIGHT(NODE* root){
+        if(root==NULL){
+            return 0 ; 
+        }
+        int lefth = HEIGHT(root->left);
+        int right = HEIGHT(root->right);
+        return max(lefth, righth)+1;
+    }
+    BALANCED(NODE* root){
+        int lefth = HEIGHT(root->left);
+        int righth = HEIGHT(root->right);
+        if(abs(lefth-righth)<=1){
+            return false ; 
+        }
+        return BALANCED(root->left)&&BALANCED(root->right);
+
+    }
+}
