@@ -1,0 +1,43 @@
+THIS QUES IS MAIN IS FOR ROATATE LIST BY K IT IS DONE BY OPTIMAL APPROACH
+THE PREVIEW OF CODE IS LIKE THIS 
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* rotateRight(ListNode* head, int k) {
+        ListNode* tail = head;
+        if(!head||!head->next||k==0){
+            return head;
+        }
+        // LENGTH
+        int L = 1;
+
+        while(tail->next!=NULL){
+            tail = tail->next;
+            L++;
+        }
+        k = k%L;
+        if(k==0){
+            return head ;
+        }
+      
+        int remain =  L-k;
+        // NEW CONNECT 
+          tail->next=head;
+          ListNode* newtail = head ;
+        for(int i = 1 ;i<remain; i++){
+            newtail = newtail->next;
+        }
+        ListNode* newhead = newtail->next;
+        newtail->next =NULL;
+        return newhead;
+    }
+};
