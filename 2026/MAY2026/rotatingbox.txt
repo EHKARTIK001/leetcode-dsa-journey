@@ -1,0 +1,37 @@
+class Solution {
+public:
+    vector<vector<char>> rotateTheBox(vector<vector<char>>& boxGrid) {
+        int n = boxGrid[0].size();
+        int m = boxGrid.size();
+        vector<vector<char>> result(n, vector<char>(m));
+        
+        for (int i = 0; i < n; i++) { // TRANSPOSE
+            for (int j = 0; j < m; j++) {
+                result[i][j] = boxGrid[j][i];
+            }
+        }
+        for (vector<char>& row : result) { // REVERSE
+            reverse(begin(row), end(row));
+        }
+        for (int j = 0;  j< m; j++) {
+            for (int i = n-1; i>= 0; i--) {
+                if (result[i][j] == '.') {
+                    int stoner = -1;
+                    for (int k = i - 1; k >= 0; k--) {
+                        if (result[k][j] == '*') {
+                            break;
+                        } else if (result[k][j] == '#') {
+                            stoner = k;
+                            break;
+                        }
+                    }
+                    if (stoner != -1) {
+                        result[i][j] = '#';
+                        result[stoner][j] = '.';
+                    }
+                }
+            }
+        }
+        return result;
+    }
+};
