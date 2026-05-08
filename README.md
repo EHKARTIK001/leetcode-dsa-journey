@@ -14,15 +14,6 @@
 
 ---
 
-## 🗓️ April 2025 – Daily Logs
-
-| Day | Problem Name       | Language | Approach Used | Notes | Code Link |
-|-----|--------------------|----------|----------------|-------|-----------|
-| 19  | Two Sum            | C++      | HashMap        | Learned from MIK | [day-19-two-sum.cpp](apr-2025/day-19-two-sum.cpp) |
-| 20  | *Add next here...* | -        | -              | -     | -         |
-
----
-
 ## 🧠 Learning Strategy
 
 - Watch explanation for tough problems (CodeStoryWithMIK / NeetCode)
